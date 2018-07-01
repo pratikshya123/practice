@@ -1,0 +1,50 @@
+<html>
+    <head>
+      <style>
+            #insert{
+                background-color: #2196F3;
+            }
+            #insert_again{
+                background-color: #8BC34A;
+            }
+        </style>
+    </head>
+    <body>
+<!-- feedback0 -->
+       <div>
+        <p id="insert">
+    <!-- [API call garera lyako data yeta!]  -->
+    </p>
+</div>
+
+
+
+
+    <!-- cat-->
+
+    <p id = "insert_again">
+        Call AGAIN
+    </p>
+    </body>
+    
+    <script type ="text/javascript">
+    
+    var userInput = 'sanepa'
+    var URL = `https://maps.googleapis.com/maps/api/geocode/json?address=${userInput}`
+  
+    
+    fetch(URL)
+    .then(res => {
+    return res.json();
+    })
+    .then(pop => {
+        // var feedback0 = pop.results[0].address_components[3].long_name
+     //var cat = pop.results[0].address_components[3].types[0]
+     //document.getElementById('insert').innerHTML = feedback0;
+    // document.getElementById('insert_again').innerHTML = cat;
+
+    });
+   
+</script>
+</html>
+

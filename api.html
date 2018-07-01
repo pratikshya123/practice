@@ -1,0 +1,27 @@
+
+
+<html>
+	<head>
+	<title>fetch yo</title>
+	</head>
+	<body>
+		<p id="insert">
+    [API call garera lyako data yeta!] 
+    </p>
+	</body>
+	
+  
+	<script type ="text/javascript">
+		
+    //hamle gareko API CALL
+    fetch('https://www.reddit.com/r/javascript/top/.json?limit=5')
+	.then(res => {
+	return res.json();
+	})
+	.then(json => {
+		var guu = json.data.children[0].data.subreddit;
+    document.getElementById('insert').innerHTML = guu;
+	});
+
+</script>
+</html>
